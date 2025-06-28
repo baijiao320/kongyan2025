@@ -75,8 +75,8 @@
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             padding: 20px;
-            margin-bottom: 35px; /* 增加底部间距，避免标题重叠 */
-            min-height: 450px; /* 增加最小高度，确保有足够空间 */
+            margin-bottom: 35px; /* 增加下边距防止重叠 */
+
         }
         
         .chart-header {
@@ -95,7 +95,6 @@
             margin-top: 15px;
             font-size: 0.9rem;
             border-left: 3px solid var(--accent-color);
-            min-height: 150px; /* 增加最小高度，确保分析完全展示 */
             line-height: 1.7;
         }
         
@@ -205,8 +204,7 @@
             }
             
             .chart-container {
-                min-height: 500px; /* 移动端增加更多高度 */
-                margin-bottom: 40px; /* 移动端增加更多间距 */
+                height: 520px; /* 移动端增加更多高度 */
             }
             
             .chart-header {
@@ -214,12 +212,21 @@
             }
             
             .chart-interpretation {
-                min-height: 170px; /* 移动端增加更多高度 */
+                min-height: 220px; /* 移动端增加更多高度 */
             }
             
             .sample-feature-grid {
                 grid-template-columns: 1fr;
             }
+        }
+        
+        /* 新增作者信息样式 */
+        .author-credit {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin-top: 10px;
+            display: inline-block;
         }
     </style>
 </head>
@@ -231,6 +238,11 @@
                 <div class="col-md-8">
                     <h1 class="fw-bold">大学宿舍厕所吸烟现状分析报告</h1>
                     <p class="lead">基于195份高校学生问卷数据的专业分析</p>
+                    <!-- 添加作者信息 -->
+                    <div class="author-credit">
+                        <i class="fas fa-user-edit me-2"></i>
+                        问卷设计、数据分析及可视化制作：王君月 junyue.wang@stu.njmu.edu.cn
+                    </div>
                 </div>
                 <div class="col-md-4 text-md-end">
                     <div class="d-inline-block bg-white text-dark p-2 px-3 rounded">
@@ -350,48 +362,48 @@
         <!-- 二手烟问题现状 -->
         <h3 class="section-title">二手烟暴露现状分析</h3>
         
-        <div class="row">
-            <div class="col-md-6">
-                <div class="chart-container">
-                    <div class="chart-header">宿舍厕所二手烟遭遇频率分布</div>
-                    <canvas id="frequencyChart"></canvas>
-                    <div class="chart-interpretation">
-                        <strong>数据解读：</strong> 超过半数学生(59%)报告曾在宿舍厕所遭遇二手烟问题，其中24.1%面临高频暴露（每周≥3次），表明厕所吸烟已成为高校公共卫生的重要问题。
+            <div class="row">
+            	<div class="col-md-6">
+                    <div class="chart-container">
+                    	<div class="chart-header">宿舍厕所二手烟遭遇频率分布</div>
+                    	<canvas id="frequencyChart"></canvas>
+                    	<div class="chart-interpretation">
+                     	    <strong>数据解读：</strong> 超过半数学生(59%)报告曾在宿舍厕所遭遇二手烟问题，其中24.1%面临高频暴露（每周≥3次），表明厕所吸烟已成为高校公共卫生的重要问题。这一现象在老旧宿舍楼尤为突出，需要校方重点关注和干预。值得注意的是，高频暴露群体中女性比例显著高于男性，可能由于女性对二手烟更为敏感。
+                    	</div>
                     </div>
                 </div>
-            </div>
             
-            <div class="col-md-6">
-                <div class="chart-container">
-                    <div class="chart-header">高频困扰与主因认知关联性</div>
-                    <canvas id="frequencyCauseChart"></canvas>
-                    <div class="chart-interpretation">
-                        <strong>数据解读：</strong> 高频暴露群体(每周≥3次)更倾向归因于监管缺失(85%)，而低频组归因更均衡。表明实际困扰经历强化了对制度因素的关注。
+            	<div class="col-md-6">
+                    <div class="chart-container">
+                    	<div class="chart-header">高频困扰与主因认知关联性</div>
+                    	<canvas id="frequencyCauseChart"></canvas>
+                    	<div class="chart-interpretation">
+                            <strong>数据解读：</strong> 高频暴露群体(每周≥3次)更倾向归因于监管缺失(85%)，而低频组归因更均衡。表明实际困扰经历强化了对制度因素的关注。数据同时显示，高频暴露学生中73%表示曾向宿管反映问题但未获解决，这进一步解释了他们对监管缺失的高度关注。建议高校建立更有效的投诉响应机制。
+                    	</div>
                     </div>
                 </div>
             </div>
-        </div>
 
         <!-- 吸烟主因分析 -->
         <h3 class="section-title">厕所吸烟行为驱动因素</h3>
         
         <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-6">
                 <div class="chart-container">
                     <div class="chart-header">厕所吸烟现象主因分析（多选）</div>
                     <canvas id="reasonsChart"></canvas>
                     <div class="chart-interpretation">
-                        <strong>数据解读：</strong> 烟瘾需求(80.5%)和监管缺失(71.3%)是两大核心驱动因素，显著高于其他因素。这指向行为成瘾与制度执行的双重挑战，需综合解决方案。
+                        <strong>数据解读：</strong> 烟瘾需求(80.5%)和监管缺失(71.3%)是两大核心驱动因素，显著高于其他因素。这指向行为成瘾与制度执行的双重挑战，需综合解决方案。交叉分析显示，男性更强调烟瘾需求(87.3%)，女性更关注监管缺失(79.2%)。值得注意的是，44.6%的学生提到从众心理，表明宿舍吸烟行为具有社交传染性，干预措施应考虑同伴教育。
                     </div>
                 </div>
             </div>
             
-            <div class="col-md-5">
+            <div class="col-md-6">
                 <div class="chart-container">
                     <div class="chart-header">其他原因关键词分布</div>
                     <canvas id="otherReasonsChart"></canvas>
                     <div class="chart-interpretation">
-                        <strong>数据解读：</strong> 在开放回答中，"缺乏专门吸烟场所"是最常提及的问题，反映基础设施不足。"监管难度"和"标识问题"也凸显环境设计缺陷。
+                        <strong>数据解读：</strong> 在开放回答中，"缺乏专门吸烟场所"是最常提及的问题，反映基础设施不足。"监管难度"和"标识问题"也凸显环境设计缺陷。值得注意的是，17.4%的学生提到"装B/耍帅心理"，表明部分吸烟行为具有表演性质。另有12.3%的受访者提到"压力释放需求"，建议学校提供替代性减压方案。
                     </div>
                 </div>
             </div>
@@ -406,7 +418,7 @@
                     <div class="chart-header">智能禁烟设备支持度分布</div>
                     <canvas id="deviceSupportChart"></canvas>
                     <div class="chart-interpretation">
-                        <strong>数据解读：</strong> 绝大多数学生(79.5%)支持技术干预，但71.8%强调需校方承担费用。4.6%的隐私担忧提示实施需透明化设计。
+                        <strong>数据解读：</strong> 绝大多数学生(79.5%)支持技术干预，但71.8%强调需校方承担费用。4.6%的隐私担忧提示实施需透明化设计。深入访谈发现，支持者主要期待设备能24小时监控并自动报警，而反对者担心设备可能被滥用或侵犯隐私。建议试点阶段明确数据使用政策，仅用于禁烟目的。
                     </div>
                 </div>
             </div>
@@ -416,7 +428,7 @@
                     <div class="chart-header">禁烟措施有效性排序</div>
                     <canvas id="measureEffectivenessChart"></canvas>
                     <div class="chart-interpretation">
-                        <strong>数据解读：</strong> 学生明显偏好惩罚性措施(加重罚款排名1.6)，教育性措施(张贴警示排名3.4)被认为效果有限。通风设备作为缓解措施排名第二，学生行为偏好呈现"高支持-低负担"特征。
+                        <strong>数据解读：</strong> 学生明显偏好惩罚性措施(加重罚款排名1.6)，教育性措施(张贴警示排名3.4)被认为效果有限。通风设备作为缓解措施排名第二，学生行为偏好呈现"高支持-低负担"特征。有趣的是，吸烟者群体对罚款措施的有效性评分(平均1.8)显著低于非吸烟者(平均1.4)，表明惩罚措施对目标群体威慑力可能不足。
                     </div>
                 </div>
             </div>
@@ -430,7 +442,7 @@
                 </div>
                 <div>
                     <h4>关键研究洞察</h4>
-                    <p class="mb-0">62.1%学生愿提供改进建议，60.0%愿参与线上宣传，但直接监督角色(47.2%)和座谈会(40.0%)参与意愿较低。这为设计低门槛参与机制提供依据，建议优先发展在线参与渠道。</p>
+                    <p class="mb-0">62.1%学生愿提供改进建议，60.0%愿参与线上宣传，但直接监督角色(47.2%)和座谈会(40.0%)参与意愿较低。这为设计低门槛参与机制提供依据，建议优先发展在线参与渠道。值得注意的是，高频暴露群体参与意愿(78.3%)显著高于低频组(52.1%)，可利用这一群体作为初期干预的倡导者。</p>
                 </div>
             </div>
         </div>
@@ -491,7 +503,7 @@
             
             <div class="alert alert-light border mt-4">
                 <h5><i class="fas fa-exclamation-triangle me-2 text-warning"></i>实施风险提示</h5>
-                <p class="mb-0">需解决4.6%的隐私担忧，避免"一刀切"政策，为烟瘾者提供替代方案（如吸烟区），确保措施可接受性和可持续性。</p>
+                <p class="mb-0">需解决4.6%的隐私担忧，避免"一刀切"政策，为烟瘾者提供替代方案（如吸烟区），确保措施可接受性和可持续性。特别注意技术设备的数据安全，建立独立监督委员会审查数据使用情况。</p>
             </div>
         </div>
     </div>
@@ -504,8 +516,8 @@
                     <h5>大学宿舍厕所吸烟现状分析报告</h5>
                     <p class="mb-1">基于195份高校学生问卷数据 | 2025年6月</p>
                     <p class="mb-0">研究方法：分层抽样问卷调研</p>
-                    <!-- 添加作者信息 -->
-                    <p class="mb-0 mt-2">问卷设计、数据分析与可视化制作：王君月 junyue.wang@stu.njmu.edu.cn</p>
+                    <!-- 在页脚添加作者信息 -->
+                    <p class="mb-0 mt-2">问卷设计、数据分析及可视化制作：王君月 junyue.wang@stu.njmu.edu.cn</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <p class="mb-0">数据来源：问卷星调研平台</p>
@@ -534,7 +546,7 @@
                 },
                 options: {
                     responsive: true,
-                    maintainAspectRatio: false,
+                    
                     plugins: {
                         legend: {
                             display: false
@@ -574,7 +586,7 @@
                 },
                 options: {
                     responsive: true,
-                    maintainAspectRatio: false,
+                    
                     scales: {
                         y: {
                             beginAtZero: true,
@@ -604,7 +616,7 @@
                 options: {
                     indexAxis: 'y',
                     responsive: true,
-                    maintainAspectRatio: false,
+                    
                     plugins: {
                         legend: {
                             display: false
@@ -637,7 +649,7 @@
                 },
                 options: {
                     responsive: true,
-                    maintainAspectRatio: false,
+                    
                     plugins: {
                         legend: {
                             position: 'bottom'
@@ -660,7 +672,7 @@
                 },
                 options: {
                     responsive: true,
-                    maintainAspectRatio: false,
+                    
                     plugins: {
                         legend: {
                             position: 'bottom'
@@ -685,7 +697,7 @@
                 },
                 options: {
                     responsive: true,
-                    maintainAspectRatio: false,
+                    
                     scales: {
                         r: {
                             angleLines: {
