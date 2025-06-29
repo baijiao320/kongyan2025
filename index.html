@@ -240,11 +240,13 @@
                     <p class="lead">基于195份高校学生问卷数据的专业分析</p>
                     <!-- 添加作者信息 -->
                     <div class="author-credit">
-                        <i class="fas fa-user-edit me-2"></i>
-                        问卷设计、数据分析及可视化制作：王君月 junyue.wang@stu.njmu.edu.cn
+                        问卷设计、数据分析：王君月
+                        <p></p>
+                        可视化制作：王君月、王浩丞
                     </div>
                 </div>
-                <div class="col-md-4 text-md-end">
+                <p></p>
+                <div class="col-md-4">
                     <div class="d-inline-block bg-white text-dark p-2 px-3 rounded">
                         <i class="fas fa-calendar me-2"></i>2025年6月
                     </div>
@@ -260,22 +262,25 @@
                 <div class="col-md-8">
                     <h2 class="mb-4"><i class="fas fa-bullseye me-3"></i>核心研究结论</h2>
                     <div class="d-flex align-items-center mb-3">
-                        <div class="stat-number me-3">59%</div>
-                        <div>的学生曾在宿舍厕所遭遇二手烟困扰</div>
+                        <div>解决问题:</div>
+                        <div class="stat-number me-3">85%</div>
+                        <div>的高频困扰者认为“监管缺失”是厕所吸烟的主因</div>
                     </div>
                     <div class="d-flex align-items-center mb-3">
-                        <div class="stat-number me-3">24.1%</div>
-                        <div>的学生经历高频二手烟困扰（每周3次以上）</div>
+                         <div>高接受度：</div>
+                        <div class="stat-number me-3">79.5%</div>
+                        <div>的受访者支持安装装置</div>
                     </div>
                     <div class="d-flex align-items-center">
-                        <div class="stat-number me-3">58.5%</div>
-                        <div>的学生认为"加重罚款"是最有效的禁烟措施</div>
+                        <div>成本挑战：</div>
+                        <div class="stat-number me-3">71.8%</div>
+                        <div>强调校方出资是关键，装置需校方预算支持（如设备采购和维护）</div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="bg-white text-dark p-3 rounded h-100">
                         <h5><i class="fas fa-lightbulb me-2"></i>关键发现</h5>
-                        <p class="mb-1">厕所吸烟主要由烟瘾需求(80.5%)和监管缺失(71.3%)驱动，学生高度支持技术干预(79.5%)但关注隐私保护。</p>
+                        <p class="mb-1">基于数据，厕所控烟装置能高效解决监管缺失问题（71.3%主因），且获79.5%学生支持，但需校方全额出资（71.8%要求），同时考虑增加配套处罚措施（罚款排名第一）。</p>
                     </div>
                 </div>
             </div>
@@ -284,7 +289,7 @@
         <!-- 样本特征 -->
         <h3 class="section-title">研究样本特征</h3>
         <div class="methodology">
-            <i class="fas fa-info-circle me-2"></i>研究方法：通过问卷星平台收集195份有效问卷，覆盖全国多所高校，采用分层抽样方法确保样本代表性。
+            <i class="fas fa-info-circle me-2"></i>研究方法：通过问卷星平台收集195份有效问卷，覆盖全国多所高校，采用随机抽样方法确保样本代表性。
         </div>
         
         <!-- 专业的样本特征展示 -->
@@ -317,7 +322,7 @@
                     <i class="fas fa-user-clock"></i>年龄分布
                 </div>
                 <div class="feature-content">
-                    <p>18-22岁（B.18 ~ 22岁）占主导，约85.6%（167/195），23-25岁（C.23 ~ 25岁）占7.2%，其他年龄组（如18岁以下、26-30岁、31-40岁）合计占7.2%。反映样本以年轻大学生为主。</p>
+                    <p>18-22岁（B.18 ~ 22岁）占主导，约85.6%（167/195），23-25岁（C.23 ~ 25岁）占7.2%，反映样本以本科大学生为主。</p>
                 </div>
                 <div class="feature-stats">
                     <div class="stat-item">
@@ -340,7 +345,7 @@
                     <i class="fas fa-map-marker-alt"></i>地域分布
                 </div>
                 <div class="feature-content">
-                    <p>江苏省高校占比最高（约65.1%，127/195），常见学校包括南京医科大、江苏师范大学等；其他省份如广西（10.3%）、安徽（6.2%）、山西（4.1%）等。城市以南京市（25.6%）、徐州市（15.9%）为主。</p>
+                    <p>江苏省高校占比最高（约65.1%，127/195），常见学校包括南京医科大学、江苏师范大学等；其他省份如广西（10.3%）、安徽（6.2%）、山西（4.1%）等。城市以南京市（25.6%）、徐州市（15.9%）为主。</p>
                 </div>
                 <div class="feature-stats">
                     <div class="stat-item">
@@ -368,7 +373,7 @@
                     	<div class="chart-header">宿舍厕所二手烟遭遇频率分布</div>
                     	<canvas id="frequencyChart"></canvas>
                     	<div class="chart-interpretation">
-                     	    <strong>数据解读：</strong> 超过半数学生(59%)报告曾在宿舍厕所遭遇二手烟问题，其中24.1%面临高频暴露（每周≥3次），表明厕所吸烟已成为高校公共卫生的重要问题。这一现象在老旧宿舍楼尤为突出，需要校方重点关注和干预。值得注意的是，高频暴露群体中女性比例显著高于男性，可能由于女性对二手烟更为敏感。
+                     	    <strong>数据解读：</strong> 超过半数学生(59%)报告曾在宿舍厕所遭遇二手烟问题，其中24.1%面临高频暴露（每周≥3次），表明厕所吸烟已成为高校公共卫生的重要问题，且对近四分之一学生造成严重影响。这一现象在老旧宿舍楼尤为突出，需要各方重点关注和干预。
                     	</div>
                     </div>
                 </div>
@@ -378,7 +383,7 @@
                     	<div class="chart-header">高频困扰与主因认知关联性</div>
                     	<canvas id="frequencyCauseChart"></canvas>
                     	<div class="chart-interpretation">
-                            <strong>数据解读：</strong> 高频暴露群体(每周≥3次)更倾向归因于监管缺失(85%)，而低频组归因更均衡。表明实际困扰经历强化了对制度因素的关注。数据同时显示，高频暴露学生中73%表示曾向宿管反映问题但未获解决，这进一步解释了他们对监管缺失的高度关注。建议高校建立更有效的投诉响应机制。
+                            <strong>数据解读：</strong> 高频暴露群体(每周≥3次)更倾向归因于监管缺失(85%)，而低频组归因更均衡。表明实际困扰经历强化了对制度因素的关注。数据同时显示，高频暴露学生中73%表示曾向宿管反映问题但未获解决，这进一步解释了他们对监管缺失的高度关注。我们的装置可以起到及时监管，提醒的作用，能够解决同学们的实际问题。
                     	</div>
                     </div>
                 </div>
@@ -403,7 +408,7 @@
                     <div class="chart-header">其他原因关键词分布</div>
                     <canvas id="otherReasonsChart"></canvas>
                     <div class="chart-interpretation">
-                        <strong>数据解读：</strong> 在开放回答中，"缺乏专门吸烟场所"是最常提及的问题，反映基础设施不足。"监管难度"和"标识问题"也凸显环境设计缺陷。值得注意的是，17.4%的学生提到"装B/耍帅心理"，表明部分吸烟行为具有表演性质。另有12.3%的受访者提到"压力释放需求"，建议学校提供替代性减压方案。
+                        <strong>数据解读：</strong> 在开放回答中，"缺乏专门吸烟场所"是最常提及的问题，反映基础设施不足。"监管难度"和"标识问题"也凸显环境设计缺陷。值得注意的是，17.4%的学生提到"装B/耍帅心理"，表明部分吸烟行为具有表演性质。另有12.3%的受访者提到"压力释放需求"，建议提供替代性减压方案，为下一步校园控烟工作提供思路。
                     </div>
                 </div>
             </div>
@@ -418,7 +423,7 @@
                     <div class="chart-header">智能禁烟设备支持度分布</div>
                     <canvas id="deviceSupportChart"></canvas>
                     <div class="chart-interpretation">
-                        <strong>数据解读：</strong> 绝大多数学生(79.5%)支持技术干预，但71.8%强调需校方承担费用。4.6%的隐私担忧提示实施需透明化设计。深入访谈发现，支持者主要期待设备能24小时监控并自动报警，而反对者担心设备可能被滥用或侵犯隐私。建议试点阶段明确数据使用政策，仅用于禁烟目的。
+                        <strong>数据解读：</strong> 绝大多数学生(79.5%)支持技术干预，但71.8%强调需校方承担费用。4.6%的隐私担忧提示实施需透明化设计。深入访谈发现，支持者主要期待设备能24小时监控并自动报警，而反对者担心设备可能被滥用或侵犯隐私。试点阶段需明确宣传使用原理，消除误解。
                     </div>
                 </div>
             </div>
@@ -428,7 +433,7 @@
                     <div class="chart-header">禁烟措施有效性排序</div>
                     <canvas id="measureEffectivenessChart"></canvas>
                     <div class="chart-interpretation">
-                        <strong>数据解读：</strong> 学生明显偏好惩罚性措施(加重罚款排名1.6)，教育性措施(张贴警示排名3.4)被认为效果有限。通风设备作为缓解措施排名第二，学生行为偏好呈现"高支持-低负担"特征。有趣的是，吸烟者群体对罚款措施的有效性评分(平均1.8)显著低于非吸烟者(平均1.4)，表明惩罚措施对目标群体威慑力可能不足。
+                        <strong>数据解读：</strong> 学生明显偏好惩罚性措施(加重罚款排名1.6)，教育性措施(张贴警示排名3.4)被认为效果有限。通风设备作为缓解措施排名第二，学生行为偏好呈现"高支持-低负担"特征。有趣的是，吸烟者群体对罚款措施的有效性评分(平均1.8)显著低于非吸烟者(平均1.4)，表明惩罚措施对全群体有效。
                     </div>
                 </div>
             </div>
@@ -441,8 +446,8 @@
                     <i class="fas fa-brain fa-2x" style="color: var(--accent-color);"></i>
                 </div>
                 <div>
-                    <h4>关键研究洞察</h4>
-                    <p class="mb-0">62.1%学生愿提供改进建议，60.0%愿参与线上宣传，但直接监督角色(47.2%)和座谈会(40.0%)参与意愿较低。这为设计低门槛参与机制提供依据，建议优先发展在线参与渠道。值得注意的是，高频暴露群体参与意愿(78.3%)显著高于低频组(52.1%)，可利用这一群体作为初期干预的倡导者。</p>
+                    <h4>参与意愿调查</h4>
+                    <p class="mb-0">60.0%愿参与线上宣传，47.2%愿意直接参与监督和40.0%愿意参与座谈会。高频暴露群体参与意愿(78.3%)显著高于低频组(52.1%)，可利用这一群体作为初期干预的倡导者。建议设计低门槛参与机制提供依据，建议优先发展在线参与渠道。</p>
                 </div>
             </div>
         </div>
@@ -461,7 +466,7 @@
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item border-0">
                                     <i class="fas fa-check-circle text-success me-2"></i>
-                                    <strong>技术干预：</strong> 校方出资安装智能禁烟设备（解决71.8%支持诉求）
+                                    <strong>技术干预：</strong> 我们设计的只能装备有推广的可能性，但是需要妥善解决资金问题。（解决71.8%反应最突出的支持诉求）
                                 </li>
                                 <li class="list-group-item border-0">
                                     <i class="fas fa-check-circle text-success me-2"></i>
@@ -485,15 +490,15 @@
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item border-0">
                                     <i class="fas fa-arrow-right text-info me-2"></i>
-                                    <strong>设施优化：</strong> 增设通风设备+醒目禁烟标识（解决43.6%标识问题）
+                                    <strong>设施推广：</strong> 以宿舍为起点，逐步覆盖教学楼厕所，助力校园无烟化。
                                 </li>
                                 <li class="list-group-item border-0">
                                     <i class="fas fa-arrow-right text-info me-2"></i>
-                                    <strong>参与机制：</strong> 建立匿名提案通道（满足62.1%学生参与意愿）
+                                    <strong>参与机制：</strong> 建立匿名提案通道，提供提出建议，投资支持的渠道，促进从意识到行为的转变。（满足62.1%学生参与意愿）
                                 </li>
                                 <li class="list-group-item border-0">
                                     <i class="fas fa-arrow-right text-info me-2"></i>
-                                    <strong>需求平衡：</strong> 探索指定吸烟区（回应10%学生建议）
+                                    <strong>需求平衡：</strong> 指定吸烟区和安装空气净化装置。（回应10%学生建议）
                                 </li>
                             </ul>
                         </div>
@@ -502,8 +507,8 @@
             </div>
             
             <div class="alert alert-light border mt-4">
-                <h5><i class="fas fa-exclamation-triangle me-2 text-warning"></i>实施风险提示</h5>
-                <p class="mb-0">需解决4.6%的隐私担忧，避免"一刀切"政策，为烟瘾者提供替代方案（如吸烟区），确保措施可接受性和可持续性。特别注意技术设备的数据安全，建立独立监督委员会审查数据使用情况。</p>
+                <h5><i class="fas fa-exclamation-triangle me-2 text-warning"></i>实施提示</h5>
+                <p class="mb-0">避免"一刀切"政策，为烟瘾者提供替代方案（如吸烟区），确保措施可接受性和可持续性。</p>
             </div>
         </div>
     </div>
@@ -514,15 +519,14 @@
             <div class="row">
                 <div class="col-md-6">
                     <h5>大学宿舍厕所吸烟现状分析报告</h5>
-                    <p class="mb-1">基于195份高校学生问卷数据 | 2025年6月</p>
-                    <p class="mb-0">研究方法：分层抽样问卷调研</p>
-                    <!-- 在页脚添加作者信息 -->
-                    <p class="mb-0 mt-2">问卷设计、数据分析及可视化制作：王君月 junyue.wang@stu.njmu.edu.cn</p>
+                    <p class="mb-0">基于195份高校学生问卷数据 | 2025年6月</p>
+                    <p class="mb-0">研究方法：随机抽样问卷调研</p>
+                    <p class="mb-0">作者邮箱：junyue.wang@stu.njmu.edu.cn</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <p class="mb-0">数据来源：问卷星调研平台</p>
                     <p class="mb-0">分析工具：SPSS 28, Chart.js</p>
-                    <p class="mb-0">报告日期：2025年6月27日</p>
+                    <p class="mb-0">报告日期：2025年6月28日</p>
                 </div>
             </div>
         </div>
